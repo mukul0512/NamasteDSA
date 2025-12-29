@@ -110,7 +110,7 @@
 //     let row = "";
 //     for (let i = 0; i < n; i++) {
 //         for (let j = 0; j < n - i; j++) {
-//             row = row + ("*") + " ";
+//             row = row + "*" + " ";
 //         }
 //         row = row + "\n";
 //     }
@@ -119,4 +119,64 @@
 // let result = printStarReverseRightTriangle(n)
 // console.log(result);
 
-// 8.
+// 8. printRightTriangleUlta, n=5
+// let n = 5;
+// const printRightTriangleUlta = (n) => {
+//     let res = "";
+//     for (let i = 0; i < n; i++) {
+//         for (let j = 0; j < n - (i + 1); j++) {
+//             res = res + "-" + " ";
+//         }
+//         for (let k = 0; k <= i; k++) {
+//             res = res + "*" + " ";
+//         }
+//         res = res + "\n";
+//     }
+//     return res;
+// }
+// let result = printRightTriangleUlta(n);
+// console.log(result);
+
+// 9.  printBinaryRightTriangle n = 5
+// let n = 5;
+// const printBinaryTriangle = (n) => {
+//     let res = "";
+//     for (let i = 0; i < n; i++) {
+//         let switchVar = 1;
+//         for (let j = 0; j <= i; j++) {
+//             res = res + switchVar + " ";
+//             if (switchVar === 1) {
+//                 switchVar = 0;
+//             }
+//             else {
+//                 switchVar = 1;
+//             }
+//         }
+//         res = res + "\n";
+//     }
+//     return res;
+// }
+// let result = printBinaryTriangle(n);
+// console.log(result);
+
+// 10.  printBinaryRightTriangle2 n = 5
+// let n = 5;
+// const printBinaryTriangle2 = (n) => {
+//     let res = "";
+//     let switchVar = 1;
+//     for (let i = 0; i < n; i++) {
+//         for (let j = 0; j <= i; j++) {
+//             res = res + switchVar + " ";
+//             if (switchVar === 1) {
+//                 switchVar = 0;
+//             }
+//             else {
+//                 switchVar = 1;
+//             }
+//         }
+//         res = res + "\n";
+//     }
+//     return res;
+// }
+// let result = printBinaryTriangle2(n);
+// console.log(result);
