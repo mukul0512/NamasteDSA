@@ -39,4 +39,28 @@ Output: 3
 // let result = isPalindrome(n);
 // console.log(result);
 
-// Question 3. Reverse Integer
+// Question 3. Reverse Integer, n = 1432
+let n = 1432;
+let rev = 0;
+let nCopy = n;
+const reverseInteger = (n) => {
+    n = Math.abs(n) // converting all the -ve numbers to +ve numbers
+    while (n > 0) {
+        let lastDigit = n % 10;
+        rev = (10 * rev) + lastDigit;
+        n = Math.floor(n / 10);
+    }
+    let limit = Math.pow(2, 31);
+    // let limit = 2**31;
+    if(rev < -limit || rev > limit) return 0; 
+
+    // if (rev === nCopy) {
+    //     return -rev;
+    // }
+    // else {
+    //     return rev;
+    // }
+    return (nCopy < 0) ? - rev : rev;
+}
+let res = reverseInteger(n);
+console.log(res);
