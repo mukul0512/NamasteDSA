@@ -16,7 +16,44 @@ addTwoNumbers(5, 10);
 1. Write a function to check if a number is prime or not?
 */
 
+const isPrime = (num) => {
+    if (num <= 1) {
+        console.log(num + " is not a prime number");
+        return false;
+    }
+    for (let i = 2; i <= Math.sqrt(num); i++) {
+        if (num % i === 0) {
+            console.log(num + " is not a prime number");
+            return false;
+        }
+    }
+    console.log(num + " is a prime number");
+    return true;
+}
+isPrime(8);
+// ----------------------------------------------------------
+const isPrimeNum = (num) => {
+    if (num <= 1) {
+        console.log(num + " is not a prime number");
+    }
+    else if (num === 2) {
+        console.log(num + " is a prime number");
+    }
+    else {
+        for (let i = 2; i < num; i++) {
+            if (num % i === 0) {
+                console.log(num + " is not a prime number");
+                break;
+            }
+            else {
+                console.log(num + " is a prime number");
+                break;
+            }
+        }
+    }
+}
 
+isPrimeNum(9);
 
 /* 
 2. Write a function to print all the even no in the given array using for and while loop i.e. arr = [10, 5, 7, 0, 8, 3, 80];
